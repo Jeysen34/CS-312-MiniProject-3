@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <%- include('header') %>
+
+    <div class="authCard">
+      <div class="authCardBody">
+        <!-- Make POST request to /login route -->
+        <form action="/register" method="POST">
+          <div class="form-group">
+            <!-- Username -->
+            <label for="user_id">Username</label>
+            <input type="user_id" class="form-control" name="user_id" />
+          </div>
+          <div class="form-group">
+            <!-- Password -->
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" />
+          </div>
+          <div class="form-group">
+            <!-- Password -->
+            <label for="password">Name</label>
+            <input type="name" class="form-control" name="name" />
+          </div>
+          <button type="submit" class="btn btn-dark">Register</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <!-- Footer -->
+  <%- include('footer') %>
+</html>
